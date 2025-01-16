@@ -7,12 +7,12 @@ def open_f(path_to_file) -> dict:
 
 
 def generate_diff(file1, file2):
-    sorted_keys_f1 = sorted(list(open_f(file1)))
-    sorted_keys_f2 = sorted(list(open_f(file2)))
+    file1 = open_f(file1)
+    file2 = open_f(file2)
     res = '''{
 '''
-    for i in sorted_keys_f1:
-        if i in sorted_keys_f2:
+    for i in sorted(list(file1)):
+        if i in sorted(list(file2)):
             if file1[i] == file2[i]:
                 res += f'    {i}: {file1[i]}\n'
             else:
@@ -20,8 +20,8 @@ def generate_diff(file1, file2):
   + {i}: {file2[i]}\n'''
         else:
             res += f'  - {i}: {file1[i]}\n'
-    for i in sorted_keys_f2:
-        if i not in sorted_keys_f1:
+    for i in sorted(list(file2)):
+        if i not in sorted(list(file1)):
             res += f'  + {i}: {file2[i]}\n'
     res += '}'
     return res
