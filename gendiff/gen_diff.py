@@ -1,5 +1,4 @@
 import json
-import pathlib
 
 
 def open_f(path_to_file) -> dict:
@@ -19,7 +18,7 @@ def generate_diff(file1, file2):
             if file1[i] == file2[i]:
                 res += f'    {i}: {file1[i]}\n'
             else:
-                res +=f'''  - {i}: {file1[i]}
+                res += f'''  - {i}: {file1[i]}
   + {i}: {file2[i]}\n'''
         else:
             res += f'  - {i}: {file1[i]}\n'
