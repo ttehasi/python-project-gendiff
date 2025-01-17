@@ -13,8 +13,6 @@ def read_file(filename):
 
 def test_generate_diff():
     result = read_file('result_file1_file2.txt')
-    actual = generate_diff('/home/ttehasi/python-project-50/'
-                           'tests/test_data/file1.json',
-                           '/home/ttehasi/python-project-50/'
-                           'tests/test_data/file2.json')
+    actual = generate_diff(get_test_data_path('file1.json'),
+                           get_test_data_path('file2.json'))
     assert actual == result
