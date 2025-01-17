@@ -1,5 +1,5 @@
 lint:
-	ruff check gendiff
+	ruff check
 
 install:
 	uv sync
