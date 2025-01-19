@@ -1,5 +1,7 @@
 import json
 
+from gendiff.pars_yaml import open_ymlf
+
 
 def open_f(path_to_file) -> dict:
     with open(path_to_file) as file:
@@ -7,8 +9,12 @@ def open_f(path_to_file) -> dict:
 
 
 def generate_diff(file1, file2):
-    file1 = open_f(file1)
-    file2 = open_f(file2)
+    if str(file1)[-5:] == '.json' and str(file2)[-5:] == '.json':
+        file1 = open_f(file1)
+        file2 = open_f(file2)
+    else:
+        file1 = open_ymlf(file1)
+        file2 = open_ymlf(file2)
     res = '''{
 '''
     for i in sorted(list(file1)):
