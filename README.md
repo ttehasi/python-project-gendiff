@@ -9,9 +9,13 @@
 
 [![asciicast](https://asciinema.org/a/djCfDR2K0qTnGeiqy4hVWhLO9.svg)](https://asciinema.org/a/djCfDR2K0qTnGeiqy4hVWhLO9)
 
+[![asciicast](https://asciinema.org/a/mkiLw1Llc4brT2wrSHaMW7H4T.svg)](https://asciinema.org/a/mkiLw1Llc4brT2wrSHaMW7H4T)
+
 ## Asciinema YAML file:
 
 [![asciicast](https://asciinema.org/a/H918cvPLQohe9DMY2NDxLKcaU.svg)](https://asciinema.org/a/H918cvPLQohe9DMY2NDxLKcaU)
+
+[![asciicast](https://asciinema.org/a/eqSYOXkzxMhXXDIPTiRrzoWmN.svg)](https://asciinema.org/a/eqSYOXkzxMhXXDIPTiRrzoWmN)
 
 ### Links
 

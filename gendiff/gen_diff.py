@@ -27,7 +27,7 @@ def stringify(value, lvl=1):
     return result
 
 
-def generate_diff(file1, file2, lvl=1):
+def generate_diff(file1, file2, lvl=1, format_name='stylish'):
     if isinstance(file1, str) and isinstance(file2, str):
         if str(file1)[-5:] == '.json' and str(file2)[-5:] == '.json':
             file1 = open_f(file1)
@@ -35,8 +35,9 @@ def generate_diff(file1, file2, lvl=1):
         else:
             file1 = open_ymlf(file1)
             file2 = open_ymlf(file2)
-    result = '{\n'
+    result = ''
     if isinstance(file1, dict) and isinstance(file2, dict):
+        result += '{\n'
         keys1 = sorted(list(file1.keys()))
         keys2 = sorted(list(file2.keys()))
         keys12 = sorted(set(keys1 + keys2))
