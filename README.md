@@ -5,13 +5,13 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/88675eaf4e4ca1e04a88/maintainability)](https://codeclimate.com/github/ttehasi/python-project-50/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/88675eaf4e4ca1e04a88/test_coverage)](https://codeclimate.com/github/ttehasi/python-project-50/test_coverage)
 
-## Asciinema JSON file:
+## Asciinema JSON file (default usage):
 
 [![asciicast](https://asciinema.org/a/djCfDR2K0qTnGeiqy4hVWhLO9.svg)](https://asciinema.org/a/djCfDR2K0qTnGeiqy4hVWhLO9)
 
 [![asciicast](https://asciinema.org/a/mkiLw1Llc4brT2wrSHaMW7H4T.svg)](https://asciinema.org/a/mkiLw1Llc4brT2wrSHaMW7H4T)
 
-## Asciinema YAML file:
+## Asciinema YAML file (default usage):
 
 [![asciicast](https://asciinema.org/a/H918cvPLQohe9DMY2NDxLKcaU.svg)](https://asciinema.org/a/H918cvPLQohe9DMY2NDxLKcaU)
 
