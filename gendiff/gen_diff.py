@@ -18,7 +18,7 @@ def difference(file1, file2):
         for i in keys12:
             if i in keys1 and i in keys2:
                 if isinstance(file1[i], dict) and isinstance(file2[i], dict):
-                    result[i] = ('nested', generate_diff(file1[i], file2[i]))
+                    result[i] = ('nested', difference(file1[i], file2[i]))
                 else:
                     if file1[i] == file2[i]:
                         result[i] = ('unchanged', file1[i])
@@ -42,4 +42,4 @@ def generate_diff(file1, file2, format_name='stylish'):
     diff = difference(file1, file2)
     match format_name:
         case 'stylish':
-             return gen_diff_stylish(diff)
+            return gen_diff_stylish(diff)
