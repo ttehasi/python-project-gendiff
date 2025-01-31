@@ -17,6 +17,14 @@
 
 [![asciicast](https://asciinema.org/a/eqSYOXkzxMhXXDIPTiRrzoWmN.svg)](https://asciinema.org/a/eqSYOXkzxMhXXDIPTiRrzoWmN)
 
+## Asciinema JSON file (plain format name):
+
+[![asciicast](https://asciinema.org/a/VJBLone0FBZy3MkXrEJxVVswy.svg)](https://asciinema.org/a/VJBLone0FBZy3MkXrEJxVVswy)
+
+## Asciinema YAML file (plain format name):
+
+[![asciicast](https://asciinema.org/a/Rfrx6rnCFN0Bv6gBXtXo4ilZG.svg)](https://asciinema.org/a/Rfrx6rnCFN0Bv6gBXtXo4ilZG)
+
 ### Links
 
 This project was built using these tools:
