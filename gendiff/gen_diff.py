@@ -1,5 +1,6 @@
 import json
 
+from gendiff.gen_diff_plain import gen_diff_plain
 from gendiff.gen_diff_stylish import gen_diff_stylish
 from gendiff.pars_yaml import open_ymlf
 
@@ -43,3 +44,5 @@ def generate_diff(file1, file2, format_name='stylish'):
     match format_name:
         case 'stylish':
             return gen_diff_stylish(diff)
+        case 'plain':
+            return gen_diff_plain(diff)
