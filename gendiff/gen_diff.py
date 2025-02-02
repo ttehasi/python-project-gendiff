@@ -43,7 +43,7 @@ def generate_diff(file1, file2, format_name='stylish'):
             file2 = open_ymlf(file2)
     diff = difference(file1, file2)
     match format_name:
-        case 'stylish':
+        case None:
             return gen_diff_stylish(diff)
         case 'plain':
             return gen_diff_plain(diff)
