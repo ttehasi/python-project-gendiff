@@ -3,7 +3,7 @@ from tests.test_generate_diff import get_test_data_path, read_file
 
 
 def test_generate_diff():
-    result = read_file('result_file11_file22.txt')
+    result = read_file('result_file11_file22.cpp')
     actual = generate_diff(str(get_test_data_path('file11.json')),
                            str(get_test_data_path('file22.json')))
     yam_act = generate_diff(str(get_test_data_path('file11.yml')),

@@ -25,41 +25,18 @@ def gen_diff_stylish(value, lvl=1):
                 res += f'{'    ' * lvl}{el}: '
                 res += gen_diff_stylish(val[1], lvl + 1) + '\n'
             case 'unchanged':
-                if val[1] == '':
-                    res += (f'{'    ' * lvl}{el}:'
-                            f'{stringify(val[1], lvl=lvl + 1)}') + '\n'
-                else:
-                    res += (f'{'    ' * lvl}{el}:'
-                            f' {stringify(val[1], lvl=lvl + 1)}') + '\n'
+                res += (f'{'    ' * lvl}{el}:'
+                        f' {stringify(val[1], lvl=lvl + 1)}') + '\n'
             case 'added':
-                if val[1] == '':
-                    res += (f'{'    ' * (lvl - 1) + '  + '}{el}:'
-                            f'{stringify(val[1], lvl=lvl + 1)}') + '\n'
-                else:
-                    res += (f'{'    ' * (lvl - 1) + '  + '}{el}:'
-                            f' {stringify(val[1], lvl=lvl + 1)}') + '\n'
+                res += (f'{'    ' * (lvl - 1) + '  + '}{el}:'
+                        f' {stringify(val[1], lvl=lvl + 1)}') + '\n'
             case 'removed':
-                if val[1] == '':
-                    res += (f'{'    ' * (lvl - 1) + '  - '}{el}:'
-                            f'{stringify(val[1], lvl=lvl + 1)}') + '\n'
-                else:
-                    res += (f'{'    ' * (lvl - 1) + '  - '}{el}:'
-                            f' {stringify(val[1], lvl=lvl + 1)}') + '\n'
+                res += (f'{'    ' * (lvl - 1) + '  - '}{el}:'
+                        f' {stringify(val[1], lvl=lvl + 1)}') + '\n'
             case 'changed':
-                if val[1] == '':
-                    res += (f'{'    ' * (lvl - 1) + '  - '}{el}:'
-                            f'{stringify(val[1], lvl=lvl + 1)}') + '\n'
-                    res += (f'{'    ' * (lvl - 1) + '  + '}{el}:'
-                            f' {stringify(val[2], lvl=lvl + 1)}') + '\n'
-                elif val[2] == '':
-                    res += (f'{'    ' * (lvl - 1) + '  - '}{el}:'
-                            f' {stringify(val[1], lvl=lvl + 1)}') + '\n'
-                    res += (f'{'    ' * (lvl - 1) + '  + '}{el}:'
-                            f'{stringify(val[2], lvl=lvl + 1)}') + '\n'
-                else:
-                    res += (f'{'    ' * (lvl - 1) + '  - '}{el}:'
-                            f' {stringify(val[1], lvl=lvl + 1)}') + '\n'
-                    res += (f'{'    ' * (lvl - 1) + '  + '}{el}:'
-                            f' {stringify(val[2], lvl=lvl + 1)}') + '\n'
+                res += (f'{'    ' * (lvl - 1) + '  - '}{el}:'
+                        f' {stringify(val[1], lvl=lvl + 1)}') + '\n'
+                res += (f'{'    ' * (lvl - 1) + '  + '}{el}:'
+                        f' {stringify(val[2], lvl=lvl + 1)}') + '\n'
     res += '    ' * (lvl - 1) + '}'
     return res
