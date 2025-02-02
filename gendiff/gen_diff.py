@@ -45,6 +45,8 @@ def generate_diff(file1, file2, format_name='stylish'):
     match format_name:
         case None:
             return gen_diff_stylish(diff)
+        case 'stylish':
+            return gen_diff_stylish(diff)
         case 'plain':
             return gen_diff_plain(diff)
         case 'json':
