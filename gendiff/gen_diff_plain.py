@@ -5,6 +5,8 @@ def stringify_plain(value):
         result = 'null'
     elif value is False:
         result = 'false'
+    elif isinstance(value, int):
+        result = value
     else:
         result = f"'{value}'"
     return result
@@ -15,12 +17,11 @@ def gen_diff_plain(value, lvl=''):
     for el, val in value.items():
         match val[0]:
             case 'nested':
-
-                res += gen_diff_plain(val[1], lvl + f'{el}.')
+                res += gen_diff_plain(val[1], lvl + f'{el}.') + '\n'
             case 'added':
                 if isinstance(val[1], dict):
                     res += (f"Property '{lvl + el}'"
-                            f" was added with value: [complex value]" + '\n')
+                            f" was added with value: [complex value]") + '\n'
                 else:
                     res += (f"Property '{lvl + el}'"
                             f" was added with value:"
@@ -40,4 +41,4 @@ def gen_diff_plain(value, lvl=''):
                     res += (f"Property '{lvl + el}'"
                             f" was updated. From {stringify_plain(val[1])}"
                             f" to {stringify_plain(val[2])}") + '\n'
-    return res
+    return res.strip()
