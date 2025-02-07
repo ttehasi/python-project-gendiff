@@ -9,3 +9,5 @@ gendiffj.cast
 gendiffy.cast
 gendiffj_json.cast
 gendiffy_json.cast
+.idea/
+.coverage
