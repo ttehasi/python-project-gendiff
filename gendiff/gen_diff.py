@@ -1,10 +1,7 @@
-import json
-
-import yaml
-
 from gendiff.formatters.json import gen_diff_json
 from gendiff.formatters.plain import gen_diff_plain
 from gendiff.formatters.stylish import gen_diff_stylish
+from gendiff.get_format import get_format
 from gendiff.pars_data import parse
 
 
@@ -31,12 +28,8 @@ def difference(file1, file2):
 
 
 def generate_diff(file1, file2, format_name='stylish'):
-    if str(file1)[-5:] == '.json' and str(file2)[-5:] == '.json':
-        file1 = json.load(parse(file1))
-        file2 = json.load(parse(file2))
-    else:
-        file1 = yaml.load(parse(file1), yaml.Loader)
-        file2 = yaml.load(parse(file2), yaml.Loader)
+    file1 = parse(file1, get_format(file1))
+    file2 = parse(file2, get_format(file2))
     diff = difference(file1, file2)
     match format_name:
         case None:
