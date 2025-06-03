@@ -2,7 +2,6 @@
 
 [![Actions Status](https://github.com/ttehasi/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/ttehasi/python-project-50/actions)
 [![Actions Status](https://github.com/ttehasi/python-project-50/actions/workflows/Test-Coverage.yml/badge.svg)](https://github.com/ttehasi/python-project-50/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/88675eaf4e4ca1e04a88/maintainability)](https://codeclimate.com/github/ttehasi/python-project-50/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/88675eaf4e4ca1e04a88/test_coverage)](https://codeclimate.com/github/ttehasi/python-project-50/test_coverage)
 ## What is this?
 #### Gendiff - это консольная утилита для нахождения разницы между двумя файлами расширения yaml или json. Ниже показаны и описаны примеры использования данной консольной утилиты в разных режимах работы.
